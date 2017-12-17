@@ -4,25 +4,25 @@
 
 BoardPiece::BoardPiece(PieceType type,ChessColour col,Coordinates coord)
 {
-	piece_type = type;
-	piece_colour = col;
-	piece_coordinates = coord;
+	pieceType = type;
+	pieceColour = col;
+	pieceCoordinates = coord;
 }
 
 Coordinates BoardPiece::getCoordinates() {
-	return piece_coordinates;
+	return pieceCoordinates;
 }
 
 void BoardPiece::setCoordinates(Coordinates coord) {
-	piece_coordinates = coord;
+	pieceCoordinates = coord;
 }
 
 PieceType BoardPiece::getPieceType() {
-	return piece_type;
+	return pieceType;
 }
 
 ChessColour BoardPiece::getPieceColour() {
-	return piece_colour;
+	return pieceColour;
 }
 
 BoardPiece::~BoardPiece()

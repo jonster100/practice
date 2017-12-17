@@ -14,8 +14,8 @@ public:
 	PieceType getPieceType();
 	~BoardPiece();
 private:
-	PieceType piece_type;
-	ChessColour piece_colour;
-	Coordinates piece_coordinates;
+	PieceType pieceType;
+	ChessColour pieceColour;
+	Coordinates pieceCoordinates;
 };
 

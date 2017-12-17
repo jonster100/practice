@@ -2,10 +2,10 @@
 #include "Coordinates.h"
 
 
-Coordinates::Coordinates(int temp_x,int temp_y)
+Coordinates::Coordinates(int tempX,int tempY)
 {
-	x = temp_x;
-	y = temp_y;
+	x = tempX;
+	y = tempY;
 }
 
 int Coordinates::getXCoordinate() {

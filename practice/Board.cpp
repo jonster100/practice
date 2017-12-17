@@ -8,7 +8,7 @@ Board::Board()
 }
 
 void Board::readBoardFile() {
-	string temp;
+	/*string temp;
 	ifstream file("file.txt");
 	if (file.is_open())
 	{
@@ -19,7 +19,7 @@ void Board::readBoardFile() {
 		file.close();
 	}
 
-	else cout << "Unable to open file";
+	else cout << "Unable to open file";*/
 }
 
 void Board::setPiece(int x, int y, ChessColour col, PieceType type) {
