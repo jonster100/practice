@@ -1,2 +1,2 @@
 #pragma once
-enum ChessColour {WHITE,BLACK};
+enum ChessColour {NOCOL,WHITE,BLACK};

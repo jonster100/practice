@@ -6,12 +6,14 @@
 class BoardPiece
 {
 public:
+	BoardPiece(PieceType type, ChessColour col, Coordinates coord);
 	BoardPiece() = default;
-	BoardPiece(PieceType type, ChessColour col,Coordinates coord);
-	void setCoordinates(Coordinates coord);
+	
 	Coordinates getCoordinates();
 	ChessColour getPieceColour();
 	PieceType getPieceType();
+	void setPieceColour(ChessColour col);
+	void setPieceType(PieceType type);
 	~BoardPiece();
 private:
 	PieceType pieceType;

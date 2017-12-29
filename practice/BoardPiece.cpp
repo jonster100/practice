@@ -13,16 +13,20 @@ Coordinates BoardPiece::getCoordinates() {
 	return pieceCoordinates;
 }
 
-void BoardPiece::setCoordinates(Coordinates coord) {
-	pieceCoordinates = coord;
-}
-
 PieceType BoardPiece::getPieceType() {
 	return pieceType;
 }
 
 ChessColour BoardPiece::getPieceColour() {
 	return pieceColour;
+}
+
+void BoardPiece::setPieceColour(ChessColour col) {
+	pieceColour = col;
+}
+
+void BoardPiece::setPieceType(PieceType type) {
+	pieceType = type;
 }
 
 BoardPiece::~BoardPiece()

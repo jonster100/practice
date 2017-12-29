@@ -1,2 +1,2 @@
 #pragma once
-enum PieceType {PAWN,KNIGHT,BISHOP,ROOK,QUEEN,KING};
+enum PieceType {NOTYPE,PAWN,KNIGHT,BISHOP,ROOK,QUEEN,KING};
