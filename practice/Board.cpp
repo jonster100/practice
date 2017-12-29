@@ -1,11 +1,6 @@
 #include "stdafx.h"
 #include "Board.h"
 
-#include <iostream>
-#include <cstring>
-#include <vector>
-#include <string>
-#include <algorithm>
 using namespace std;
 Board::Board()
 {
