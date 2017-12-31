@@ -26,33 +26,35 @@ void Board::createBoardFile() {
 }
 
 void Board::readBoardFile() {
-	int i = 0;
+	int i = 1;
 	string temp="";
 	string pieceType="";
 	string pieceColour="";
 	string xCoord="";
-	int x=0;
 	string yCoord="";
-	int y=0;
+	bool newChessPiece = false;
 	ifstream file("file.txt");
 	if (file.is_open())
 	{
 		while (getline(file, temp, ':'))
 		{
-			i += 1;
-			if (i == 4) {
-				stringstream intConvX(xCoord);
-				stringstream intConvY(yCoord);
-				intConvX >> x;
-				intConvY >> y;
-				board[x][y].setPieceColour(convertColourValue(pieceColour));
-				board[x][y].setPieceType(convertPieceTypeValue(pieceType));
-				cout << getPieceCharacter(board[x][y].getPieceType())<<endl;
-				i = 0;
-			}
-			else {
-				(i == 1)?pieceType=temp : (i == 2) ?pieceColour =temp: (i == 3) ? xCoord =temp: yCoord= temp;
-			}
+				(i == 1) ? pieceType = temp : (i == 2) ? pieceColour = temp : (i == 3) ? xCoord = temp : yCoord = temp;
+				i += 1;
+				(i==5) ? newChessPiece =true : newChessPiece =false;
+				if (newChessPiece == true) {
+					int x = 0;
+					int y = 0;
+					stringstream intConvX(xCoord);
+					stringstream intConvY(yCoord);
+					intConvX >> x;
+					intConvY >> y;
+					board[x][y].setPieceColour(convertColourValue(pieceColour));
+					board[x][y].setPieceType(convertPieceTypeValue(pieceType));
+					cout << getPieceCharacter(board[x][y].getPieceType()) << "-" << board[x][y].getCoordinates().getXCoordinate() << "/" << board[x][y].getCoordinates().getYCoordinate() << endl;
+					cout << "=" << xCoord << "/" << yCoord << endl;
+					i = 1;
+					newChessPiece = false;
+				}
 		}
 		file.close();
 	}

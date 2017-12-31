@@ -12,7 +12,7 @@ int Coordinates::getXCoordinate() {
 	return x;
 }
 
-int Coordinates::getYCordinate() {
+int Coordinates::getYCoordinate() {
 	return y;
 }
 

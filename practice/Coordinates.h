@@ -5,7 +5,7 @@ public:
 	Coordinates() = default;
 	Coordinates(int tempX,int tempY);
 	int getXCoordinate();
-	int getYCordinate();
+	int getYCoordinate();
 	~Coordinates();
 private:
 	int x;
