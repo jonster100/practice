@@ -33,7 +33,7 @@ void Board::readBoardFile() {
 	string xCoord="";
 	string yCoord="";
 	bool newChessPiece = false;
-	ifstream file("file.txt");
+	ifstream file("setupChessPieces.txt");
 	if (file.is_open())
 	{
 		while (getline(file, temp, ':'))
