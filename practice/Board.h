@@ -3,7 +3,7 @@
 #include "BoardPiece.h"
 #include "PieceType.h"
 #include "ChessColour.h"
-//#include <vector>
+#include <vector>
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -16,7 +16,8 @@ public:
 	void setPiece(int x, int y, ChessColour col, PieceType type);
 	~Board();
 private:
-	BoardPiece board[8][8];
+	BoardPiece *board[8][8];
+	std::vector<BoardPiece> boardPieces; 
 	void setupBoard();
 	void printBoard();
 	char getPieceCharacter(PieceType pType);
